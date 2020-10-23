@@ -10,6 +10,9 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+	<script src = "js/gallery.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<link href="css/lightbox.css"  rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/css.css">
 </head>
 <body>
@@ -37,20 +40,24 @@
 	</header>
 	<main>
 		<aside class = "left hidden-xs col-sm-3 col-md-3 col-lg-3">
-			<a href="https://pixabay.com/photos/corgi-dog-grass-summer-each-breed-4885572/"><img src="images/corgi-4885572_1920.jpg" alt="Corgi in grass"/> </a>
+			<a href="https://pixabay.com/photos/corgi-dog-grass-summer-each-breed-4885572/"><img src="images/corgi-4885572_1920.jpg" alt="Corgi in grass" onmouseover= "upDate(this)" > </a>
 
-			<a href="https://pixabay.com/photos/dog-pet-cute-blue-eyes-corgi-5201555/"><img alt="Blue-eyed corgi" src="images/dog-5201555_1920.jpg"/></a>
+			<a href="https://pixabay.com/photos/dog-pet-cute-blue-eyes-corgi-5201555/"><img alt="Blue-eyed corgi" src="images/dog-5201555_1920.jpg" onmouseover = "upDate(this)" ></a>
 
 
-			<a href="https://pixabay.com/photos/dog-corgi-trail-purebred-adorable-1348169/" ><img src="images/dog-1348169_1920.jpg"  alt="Corgi in bush"></a>
+			<a href="https://pixabay.com/photos/dog-corgi-trail-purebred-adorable-1348169/" ><img src="images/dog-1348169_1920.jpg"  alt="Corgi in bush" onmouseover = "upDate(this)" ></a>
 
-			<a href="https://pixabay.com/photos/cardigan-welsh-corgi-corgi-5217159/"><img src="images/cardigan-5217159_1920.jpg" alt="Corgi and ball"></a>
+			<a href="https://pixabay.com/photos/cardigan-welsh-corgi-corgi-5217159/"><img src="images/cardigan-5217159_1920.jpg" alt="Corgi and ball" onmouseover = "upDate(this)" ></a>
 		</aside>
 		<section class = "right col-xs-12 col-sm-9 col-md-9 col-lg-9">
 			<h2>Cardigan Welsh Corgi</h2>
 			<p>The Cardigan Welsh Corgi is named after Cardigan county in Wales. They are generally larger than the Pembroke. Their ears are more rounded. They also have long tails, unlike the Pembroke.</p>
 			<p>They are between 14 to 17 kg and 27 - 32 cm tall. They come in a much wider range of colors than the Pembroke.
 			</p>
+			<div class = "hidden-xs"  id = "image">
+					Hover over an image to the left to display below.
+					<img id = "corgi" src="/dummy" alt="">
+			</div>
 			
 		</section>
 		<div id="myCarousel" class="visible-xs col-xs-12 carousel slide" data-interval="false">
@@ -65,20 +72,19 @@
   		<!-- Wrapper for slides -->
   			<div class="carousel-inner">
     			<div class="item active">
-      				<a href="https://pixabay.com/photos/corgi-dog-grass-summer-each-breed-4885572/"><img src="images/corgi-4885572_1920.jpg" alt="Corgi in grass"/> </a>
+      				<a href="images/corgi-4885572_1920.jpg" data-lightbox = "corgis" data-title = "Image by <a href='https://pixabay.com/users/svetlbel-10631253/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4885572'>Svetlbel</a> from <a href='https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4885572'>Pixabay</a>"><img src="images/corgi-4885572_1920.jpg" alt="Corgi in grass"/> </a>
     			</div>
 
     			<div class="item">
-      				<a href="https://pixabay.com/photos/dog-pet-cute-blue-eyes-corgi-5201555/"><img alt="Blue-eyed corgi" src="images/dog-5201555_1920.jpg"/></a>
+      				<a href="images/dog-5201555_1920.jpg" data-lightbox = "corgis" data-title = "Image by <a href='https://pixabay.com/users/jpgiance-14156911/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5201555'>jpgiance</a> from <a href='https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5201555'>Pixabay</a>"><img alt="Blue-eyed corgi" src="images/dog-5201555_1920.jpg"/></a>
+				</div>
 
+    			<div class="item">
+      				<a href="images/dog-1348169_1920.jpg"  data-lightbox = "corgis" data-title = "Image by <a href='https://pixabay.com/users/patiencenova-2447850/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1348169'>patiencenova</a> from <a href='https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1348169'>Pixabay</a>"><img src="images/dog-1348169_1920.jpg"  alt="Corgi in bush"/></a>
     			</div>
 
     			<div class="item">
-      				<a href="https://pixabay.com/photos/dog-corgi-trail-purebred-adorable-1348169/" ><img src="images/dog-1348169_1920.jpg"  alt="Corgi in bush"></a>
-    			</div>
-
-    			<div class="item">
-    				<a href="https://pixabay.com/photos/cardigan-welsh-corgi-corgi-5217159/"><img src="images/cardigan-5217159_1920.jpg" alt="Corgi and ball"></a>
+    				<a href="images/cardigan-5217159_1920.jpg" data-lightbox = "corgis" data-title = "Image by <a href='https://pixabay.com/users/imageimp-16726546/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5217159'>Ilona Peckham</a> from <a href='https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5217159'>Pixabay</a>"><img src="images/cardigan-5217159_1920.jpg" alt="Corgi and ball"/></a>
     			</div>
 
   			</div>
@@ -95,8 +101,10 @@
 		</div>
 	</main>
 	<footer>
-		<p>Created by Swaroop Shodavaram</p>
+		<p>Created by Swaroop Shodavaram [THIS IS A STICKY FOOTER]</p>
 	</footer>
+	<script src="js/lightbox.js"></script>
+	<script> lightbox.option({'wrapAround':true})</script>
 		
 		 
 </body>

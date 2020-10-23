@@ -9,7 +9,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src = "js/gallery.js"></script>
+	<link href="css/lightbox.css"  rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/css.css">
 </head>
 <body>
@@ -37,23 +39,31 @@
 	</header>
 	<main>
 		<aside class = "left hidden-xs col-sm-3 col-md-3 col-lg-3">
-			<a href="https://pixabay.com/photos/dog-corgi-pets-cute-rain-4415649/"><img src="images/dog-4415649_1920.jpg" alt="Corgi in the Rain"/></a>
+			<a href="https://pixabay.com/photos/dog-corgi-pets-cute-rain-4415649/"><img src="images/dog-4415649_1920.jpg" alt="Corgi in the Rain" onmouseover = "upDate(this)" ></a>
 
 
-			<a href="https://pixabay.com/photos/pets-dog-corgi-cute-4383141/"><img alt="Corgi by train" src="images/pets-4383141_1920.jpg"/></a>
+			<a href="https://pixabay.com/photos/pets-dog-corgi-cute-4383141/"><img src="images/pets-4383141_1920.jpg" alt="Corgi by train" onmouseover = "upDate(this)" ></a>
 
 
-			<a href="https://pixabay.com/photos/welsh-corgi-pembroke-corgi-dog-4237629/"><img src="images/welsh-corgi-pembroke-4237629_1920.jpg"  alt="Corgis and pumpkin"></a>
+			<a href="https://pixabay.com/photos/welsh-corgi-pembroke-corgi-dog-4237629/"><img src="images/welsh-corgi-pembroke-4237629_1920.jpg"  alt="Corgis and pumpkin" onmouseover = "upDate(this)"></a>
 
-			<a href="https://pixabay.com/photos/pets-dog-corgi-cute-4383142/"><img src="images/pets-4383142_1920.jpg"  alt="Corgi on train tracks"></a>
+			<a href="https://pixabay.com/photos/pets-dog-corgi-cute-4383142/"><img src="images/pets-4383142_1920.jpg"  alt="Corgi on train tracks" onmouseover = "upDate(this)" ></a>
 		</aside>
 		<section class = "right col-xs-12 col-sm-9 col-md-9 col-lg-9">
-			<h2>Pembroke Welsh Corgi</h2>
-			<p>The Pembroke Welsh Corgi is named after the county in Wales where it originated, Pembroke. It has short legs and pointed ears. They are between 11 and 14 kg and are 25 to 30 cam tall.</p>
-			<p>They are usually red, tan, black or white. Or, some combination of those colors.
-			</p>
-			<p>They are the most popular of the corgi breeds and is the favorite dog of the Queen of England.</p>
+		   	
+				<h2>Pembroke Welsh Corgi</h2>
+				<p>The Pembroke Welsh Corgi is named after the county in Wales where it originated, Pembroke. It has short legs and pointed ears. They are between 11 and 14 kg and are 25 to 30 cam tall.</p>
+				<p>They are usually red, tan, black or white. Or, some combination of those colors.
+				</p>
+				<p>They are the most popular of the corgi breeds and is the favorite dog of the Queen of England.</p>
+			<div class = "hidden-xs"  id = "image">
+					Hover over an image to the left to display below.
+					<img id = "corgi" src="/dummy" alt="">
+			</div>
+			
+			
 		</section>
+		
 		<div id="myCarousel" class="visible-xs col-xs-12 carousel slide" data-interval="false">
   			<!-- Indicators -->
   			<ol class="carousel-indicators">
@@ -66,19 +76,19 @@
   		<!-- Wrapper for slides -->
   			<div class="carousel-inner">
     			<div class="item active">
-      				<a href="https://pixabay.com/photos/dog-corgi-pets-cute-rain-4415649/"><img src="images/dog-4415649_1920.jpg" alt="Corgi in the Rain"/></a>
+      				<a href="images/dog-4415649_1920.jpg" data-lightbox = "corgis" data-title = "Image by <a href='https://pixabay.com/users/huoadg5888-8934889/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4415649'>huoadg5888</a> from <a href='https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4415649'>Pixabay</a>"  ><img src="images/dog-4415649_1920.jpg"  alt="Corgi in the Rain"/></a>
 				</div>
 
     			<div class="item">
-      				<a href="https://pixabay.com/photos/pets-dog-corgi-cute-4383141/"><img alt="Corgi by train" src="images/pets-4383141_1920.jpg"/></a>
+      				<a href="images/pets-4383141_1920.jpg" data-lightbox = "corgis" data-title = "Image by <a href='https://pixabay.com/users/huoadg5888-8934889/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4415649'>huoadg5888</a> from <a href='https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4415649'>Pixabay</a>"><img alt="Corgi by train" src="images/pets-4383141_1920.jpg"/></a>
     			</div>
 
     			<div class="item">
-      				<a href="https://pixabay.com/photos/welsh-corgi-pembroke-corgi-dog-4237629/"><img src="images/welsh-corgi-pembroke-4237629_1920.jpg"  alt="Corgis and pumpkin"></a>
+      				<a href="images/welsh-corgi-pembroke-4237629_1920.jpg" data-lightbox = "corgis" data-title = "Image by <a href='https://pixabay.com/users/elfinfox-12605865/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4237629'>Elena Rogulina</a> from <a href='https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4237629'>Pixabay</a>"><img src="images/welsh-corgi-pembroke-4237629_1920.jpg"  alt="Corgis and pumpkin" /></a>
     			</div>
 
     			<div class="item">
-    				<a href="https://pixabay.com/photos/pets-dog-corgi-cute-4383142/"><img src="images/pets-4383142_1920.jpg"  alt="Corgi on train tracks"></a>
+    				<a href="images/pets-4383142_1920.jpg" data-lightbox = "corgis" data-title = "Image by <a href='https://pixabay.com/users/huoadg5888-8934889/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4415649'>huoadg5888</a> from <a href='https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4415649'>Pixabay</a>"><img src="images/pets-4383142_1920.jpg"  alt="Corgi on train tracks" ></a>
     			</div>
   			</div>
 
@@ -92,10 +102,13 @@
     			<span class="sr-only">Next</span>
   			</a>
 		</div>
+		
 	</main>
 	<footer>
-		<p>Created by Swaroop Shodavaram</p>
+		<p>Created by Swaroop Shodavaram [THIS IS A STICKY FOOTER]</p>
 	</footer>
+	<script src="js/lightbox.js"></script>
+	<script> lightbox.option({'wrapAround':true})</script>
 	
 </body>
 </html>
