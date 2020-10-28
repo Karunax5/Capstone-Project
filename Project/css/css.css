@@ -52,11 +52,11 @@ body{
 	flex-direction: column;
 	
 }
-/*main{
+main{
 	
 	min-height: 100vh;
 
-}*/
+}
 footer{
 	background-color: rgb(250,250,250);
 	text-align: center;
